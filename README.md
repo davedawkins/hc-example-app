@@ -40,10 +40,12 @@ the bindings in viewThing will display the new state of Thing.
 ## Sutil Operators
 
  Breaking this expression down:
-   (s .>> _.Property)
+```fs
+(s .>> _.Property)
+```
 
-   .>>        is equivalent to `Store.mapDistinct`
-   _.Property is equivalent to `fun x -> x.Property`
+`.>>`        is equivalent to `Store.mapDistinct`
+`_.Property` is equivalent to `fun x -> x.Property`
 
  mapDistinct is useful when other state changes are being made, and we don't 
  want to propagate redraws for our particular projection. It will only "fire" 
