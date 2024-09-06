@@ -31,8 +31,11 @@ Note that it wouldn't make sense to have edit function such as:
     let editThing (thing : IStore<Thing>) (update: Thing -> unit) = ...
 ```
 
-This would imply that what we expect what we're (trying to) edit to change while we're edit it.
+This would imply that what we expect what we're (trying to) edit to change while we're edit it. We expect this
+function manage a local copy of Thing until it's complete and the user presses "Apply"
 
+It's still OK for commandX and commandY to have side-effects on the global copy of Thing; this is the MVU cycle, and 
+the bindings in viewThing will display the new state of Thing.
 
 ## Sutil Operators
 
