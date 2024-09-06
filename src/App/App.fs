@@ -16,6 +16,7 @@ let viewPageHome (s : System.IObservable<Address option>) =
                 Html.h4 "Current Address"
                 Html.divc "flex-row" [ Html.span "Address Line 1: "; Html.span (addr.Addr1) ]
                 Html.divc "flex-row" [ Html.span "Address Line 2: "; Html.span (addr.Addr2) ]
+                Html.divc "flex-row" [ Html.span "Is Billing: "; Html.span (addr.IsBilling |> string) ]
             ] )
 
 let viewPage (appState : IStore<AppState>) (setAddress) =

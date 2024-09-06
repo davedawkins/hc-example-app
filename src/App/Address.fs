@@ -10,6 +10,8 @@ let validateAddress (addr : Address) : Result<Address,string> =
     else
         Ok addr
 
+open Helpers.HtmlInput
+
 let editAddress (addr: Address) (apply: Address -> unit) =
 
     let addrS = Store.make addr
@@ -17,6 +19,7 @@ let editAddress (addr: Address) (apply: Address -> unit) =
 
     let setAddr1 s = update (fun addr -> { addr with Addr1 = s })
     let setAddr2 s = update (fun addr -> { addr with Addr2 = s })
+    let setIsBilling z = update (fun addr -> { addr with IsBilling = z })
 
     Html.divc "flex-column gap" [
 
@@ -39,6 +42,16 @@ let editAddress (addr: Address) (apply: Address -> unit) =
             Html.divc "control" [
                 Html.inputc "input" [
                     Bind.attr("value", addrS .>> _.Addr2, setAddr2 )
+                ]
+            ]
+        ]
+
+        Html.divc "field" [
+            Html.labelc "label" [ text "Is Billing" ]
+            Html.divc "control" [
+                Checkbox [
+                    Checked (Observable  (addrS .>> _.IsBilling))
+                    OnChecked setIsBilling
                 ]
             ]
         ]
