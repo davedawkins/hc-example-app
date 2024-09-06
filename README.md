@@ -45,6 +45,7 @@ the bindings in viewThing will display the new state of Thing.
 ```
 
 `.>>`        is equivalent to `Store.mapDistinct`
+
 `_.Property` is equivalent to `fun x -> x.Property`
 
  mapDistinct is useful when other state changes are being made, and we don't 
