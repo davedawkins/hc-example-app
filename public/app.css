@@ -1,0 +1,76 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font120 {
+    font-size: 120%;
+}
+
+.font80 {
+    font-size: 80%;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.error {
+    color: #ff6685;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gap {
+    gap: 0.5rem;
+}
+
+.app-main {
+    margin: 0.5rem;
+}
+
+.app-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-user {
+    display: flex;
+    flex-direction: row;
+}
+
+.flat-button {
+    cursor: pointer;
+    user-select: none;
+    color: #666666;
+    margin: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-bottom: 2px solid transparent;
+}
+
+.flat-button:hover {
+    border-bottom: 2px solid #eeeeee;
+}
+
+.flat-button.selected {
+    border-bottom: 2px solid #888888;
+}
+
+.flat-button:active {
+    background-color: #eeeeee;
+}
+
+button {
+    border: none;
+    border-radius: 0.2rem;
+}

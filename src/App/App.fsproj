@@ -4,6 +4,12 @@
     <DefineConstants>$(DefineConstants);FABLE_COMPILER;</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="Helpers.fs" />
+    <Compile Include="Server.fs" />
+    <Compile Include="Address.fs" />
+    <Compile Include="Page.fs" />
+    <Compile Include="Header.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
   <ItemGroup>
